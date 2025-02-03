@@ -87,6 +87,8 @@
           document.getElementById("playPauseButton").innerHTML = pauseIconSVG;
           document.getElementById("playPauseButton").classList.add("pulsing");
           this.firstStart = false;
+        } else {
+          document.getElementById("playPauseButton").classList.remove("pulsing");
         }
       }
     }
