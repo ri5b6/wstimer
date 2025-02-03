@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #E0EAFC, #CFDEF3);
   margin: 0;
   overflow: hidden;
 }
@@ -56,12 +56,12 @@ canvas {
 }
 
 .pulse {
-  animation: pulse 0.8s ease-in-out 3;
+  animation: pulse 3s ease-in-out 3;
 }
 
 /* Wenn der Button pulsieren soll, wird diese Klasse hinzugefügt */
 #playPauseButton.pulsing {
-  animation: pulse 1.5s infinite ease-in-out;
+  animation: pulse 3s infinite ease-in-out;
 }
 
 /* Sound Toggle Button (rechts unten) */
