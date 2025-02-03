@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop Timer</title>
+  <!-- Verlinke die externe CSS-Datei -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="timerContainer">
+    <canvas id="timerCanvas"></canvas>
+    <button id="playPauseButton">
+      <svg id="playIcon" width="40" height="40" viewBox="0 0 24 24">
+        <polygon points="5,3 19,12 5,21" fill="black"/>
+      </svg>
+    </button>
+    <button id="soundToggle" data-tooltip="Ton aus">
+      <svg id="soundOffIcon" viewBox="0 0 24 24">
+        <path fill="black" d="M3 10v4h4l5 5V5l-5 5H3z"/>
+        <line x1="16" y1="8" x2="22" y2="14" stroke="black" stroke-width="2"/>
+        <line x1="22" y1="8" x2="16" y2="14" stroke="black" stroke-width="2"/>
+      </svg>
+    </button>
+    <div id="timeAddButtons">
+      <button id="add1">+1</button>
+      <button id="add5">+5</button>
+      <button id="add10">+10</button>
+    </div>
+    <div id="digitalTimer">00:00</div>
+  </div>
+  
+  <!-- Audio -->
+  <audio id="alarmSound" src="bell-98033.mp3" preload="auto"></audio>
+  
+  <!-- Verlinke die externe JavaScript-Datei -->
+  <script src="js/timer.js"></script>
+</body>
+</html>
