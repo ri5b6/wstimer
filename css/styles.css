@@ -51,12 +51,17 @@ canvas {
 /* Puls-Animation für den Play/Pause Button */
 @keyframes pulse {
   0% { transform: translate(-50%, -50%) scale(1); }
-  50% { transform: translate(-50%, -50%) scale(1.2); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
   100% { transform: translate(-50%, -50%) scale(1); }
 }
 
 .pulse {
   animation: pulse 0.8s ease-in-out 3;
+}
+
+/* Wenn der Button pulsieren soll, wird diese Klasse hinzugefügt */
+#playPauseButton.pulsing {
+  animation: pulse 1.5s infinite ease-in-out;
 }
 
 /* Sound Toggle Button (rechts unten) */

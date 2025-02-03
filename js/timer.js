@@ -85,6 +85,7 @@
         if (this.firstStart && this.remainingTime > 0) {
           this.startTimer();
           document.getElementById("playPauseButton").innerHTML = pauseIconSVG;
+          document.getElementById("playPauseButton").classList.add("pulsing");
           this.firstStart = false;
         }
       }
@@ -105,10 +106,12 @@
       if (this.running) {
         this.stopTimer();
         document.getElementById("playPauseButton").innerHTML = playIconSVG;
+        playPauseButton.classList.remove("pulsing");
       } else {
         if (this.remainingTime > 0) {
           this.startTimer();
           document.getElementById("playPauseButton").innerHTML = pauseIconSVG;
+          playPauseButton.classList.add("pulsing");
         }
       }
     }
