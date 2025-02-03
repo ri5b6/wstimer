@@ -222,9 +222,4 @@
     timerInstance.updateDigitalTimer();
     timerInstance.drawTimer();
   });
-  document.getElementById("add10").addEventListener("click", () => {
-    timerInstance.remainingTime = Math.min(timerInstance.remainingTime + 600, 3600);
-    timerInstance.updateDigitalTimer();
-    timerInstance.drawTimer();
-  });
 })();

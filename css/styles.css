@@ -1,4 +1,6 @@
+/* Globaler Style: Einheitliche Schriftart für alle Texte */
 body {
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +11,7 @@ body {
   overflow: hidden;
 }
 
+/* Container für die Uhr und interne Elemente */
 #timerContainer {
   position: relative;
   width: 95vmin;
@@ -25,7 +28,7 @@ canvas {
   height: 100%;
 }
 
-/* Play/Pause Button in der Mitte */
+/* Play/Pause Button in der Mitte mit kreisrundem Rahmen, schwarzem Außenrand und Drop Shadow */
 #playPauseButton {
   position: absolute;
   top: 50%;
@@ -33,9 +36,10 @@ canvas {
   transform: translate(-50%, -50%);
   width: 60px;
   height: 60px;
-  border: none;
+  border: 2px solid black; /* Schwarzer Außenkreis */
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   z-index: 10;
   display: flex;
@@ -55,7 +59,7 @@ canvas {
   animation: pulse 0.8s ease-in-out 3;
 }
 
-/* Sound Toggle Button */
+/* Sound Toggle Button (rechts unten) */
 #soundToggle {
   position: absolute;
   bottom: 10px;
@@ -95,7 +99,7 @@ canvas {
   opacity: 1;
 }
 
-/* Zeit hinzufügen-Buttons */
+/* Zeit hinzufügen-Buttons (links unten) */
 #timeAddButtons {
   position: absolute;
   bottom: 10px;
@@ -106,16 +110,18 @@ canvas {
   z-index: 15;
 }
 
+/* Buttons für Zeit hinzufügen mit dezentem Rahmen und Drop Shadow */
 #timeAddButtons button {
   padding: 5px 10px;
   font-size: 16px;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.2);  /* dezent sichtbarer Rahmen */
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);  /* leichter Drop Shadow */
   cursor: pointer;
 }
 
-/* Digitaler Countdown */
+/* Standardposition und -größe: rechts unten innerhalb des Containers */
 #digitalTimer {
   position: absolute;
   bottom: 10px;
@@ -127,3 +133,14 @@ canvas {
   border-radius: 5px;
   z-index: 15;
 }
+
+/* Bei kleineren Bildschirmen: Timer oben positionieren und Schrift verkleinern */
+@media (max-width: 500px) {
+  #digitalTimer {
+    top: 10px;
+    right: 10px;
+    bottom: auto;
+    font-size: 18px; /* Schriftgröße wird verkleinert */
+  }
+}
+
